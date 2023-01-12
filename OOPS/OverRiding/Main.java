@@ -1,4 +1,4 @@
-package OOPS.OverRiding;
+// package OOPS.OverRiding;
 
 // Over Riding
 class A{
@@ -7,23 +7,23 @@ class A{
     } 
 }
 
-class B{
+class B extends A{
     void s(int n){
         System.err.println("Ankur");;
     } 
 }
 
-class C{
+class C extends A{
     void s(int n ,String a){
         System.err.println("Ankur 11");;
     } 
 }
+
 public class Main {
 
-
     public static void main(String[] args) {
-        A input = new A();
-        input.s("Annn");
+        C input = new C();
+        input.s("Ankur");
     }
 
 }
