@@ -26,7 +26,7 @@ public class Main {
 
          int [] arr ={1,5,10,15,20,25,30};
          int len = arr.length;
-         System.err.println(len);
+         System.out.println(len);
 
 
 
