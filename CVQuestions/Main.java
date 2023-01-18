@@ -1,13 +1,13 @@
 // package CVQuestions.String.1_____;
 
 // 1. Write a Java Program to reverse a string without using String inbuilt function.
-/*
+/* 
 import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        String str = scn.nextLine();
+        String str = "RAJA";
         int i = str.length()-1;
         String rev = "";
 
@@ -125,9 +125,8 @@ public class Main {
 
 
 //6.Write a Java Program to check Armstrong number. or in given range
+/* 
 import java.util.*;
-
-import javax.sql.rowset.spi.SyncResolver;
 
 public class Main{
 
@@ -166,10 +165,50 @@ public class Main{
       if(sum == num){
         return true;
       }
-
         return false;
-      
     }
-
-
 }
+*/
+
+
+//7.Write a program tofing second highest number in array
+/*
+mport java.util.*;
+public class Main{
+
+    public static void main(String[] args) {
+        int [] arr = {1,4,7,10,2,6,3,9};
+
+        for(int i=0; i<arr.length ; i++){
+            for(int j=i; j<arr.length; j++){
+                if(arr[i]>arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp ;
+                }
+            }
+        }
+         
+        int z  = arr.length-2;
+        System.out.println(arr[z]);
+    }
+}
+*/
+
+
+
+//8.write a program to replace all white space with using "replaceAll";
+/*
+import java.util.*;
+public class Main{
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+            String str = scn.nextLine();
+        
+            str = str.replaceAll(" " , "-");
+            System.out.println(str);
+        
+    }
+}
+*/
