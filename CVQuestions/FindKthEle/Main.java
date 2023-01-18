@@ -31,9 +31,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int []arr = {10,20,30,40,50,60};
-        int k = 60;
+        int k = 30;
         
-
       int ans  =   binarySearch(arr, k);
       if(ans != -1){
         System.out.println("Idx-> " + ans);
