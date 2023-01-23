@@ -30,12 +30,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         String str = "Ankur";
+        // System.out.println(str.length());
         int i = 0;
-
         while(i<str.length()){
            i++;
         }
-
         System.out.println(i);
     }
 
@@ -198,7 +197,7 @@ public class Main{
 
 
 //8.write a program to replace all white space with using "replaceAll";
-/*
+
 import java.util.*;
 public class Main{
 
@@ -211,4 +210,3 @@ public class Main{
         
     }
 }
-*/

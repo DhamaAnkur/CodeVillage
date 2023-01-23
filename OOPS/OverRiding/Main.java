@@ -2,19 +2,19 @@
 
 // Over Riding
 class A{
-    void s(String a){
+    void s(){
         System.err.println("11");;
     } 
 }
 
 class B extends A{
-    void s(int n){
+    void s(){
         System.err.println("Ankur");;
     } 
 }
 
 class C extends A{
-    void s(int n ,String a){
+    void s(){
         System.err.println("Ankur 11");;
     } 
 }
@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) {
         C input = new C();
-        input.s("Ankur");
+        input.s();
     }
 
 }

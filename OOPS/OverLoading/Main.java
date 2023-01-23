@@ -3,12 +3,12 @@
 // Over Loading
 class A {
     void s(String a) {
-        System.out.println("11");
+        System.out.println("Ankur");
 
     }
 
     void s(int n) {
-        System.out.println("Ankur");
+        System.out.println(11);
 
     }
 
@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         A input = new A();
-        input.s(11);
+        input.s();
     }
 
 }
