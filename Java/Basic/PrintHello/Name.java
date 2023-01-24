@@ -1,9 +1,7 @@
-
-public class Name{
+class Name{
 
     public static void main(String[] args) {
-        
-        System.out.println("Ankur Dhama");
-        System.out.println("Hello Class");
+        System.out.println("Hello World");
     }
+
 }

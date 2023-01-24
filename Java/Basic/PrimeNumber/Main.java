@@ -5,7 +5,7 @@ class Main {
     public static void main(String[] args) {
            Scanner scn = new Scanner(System.in);
 
-           int n = 874522467 ;
+           int n = 789456123 ;
 
            for(int i=2; i<=n/2 ; i++){
             if((n%i) == 0){

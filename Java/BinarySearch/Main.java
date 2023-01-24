@@ -2,15 +2,16 @@ import java.util.*;
 
 public class Main {
 
-    public static int binarySearch(int[] arr, int k) {
+    public static void binarySearch(int[] arr, int k) {
         int lo = 0;
         int hi = arr.length - 1;
 
        while(lo<=hi){
-            int mid = (hi + lo) / 2;
+            int mid = (hi + lo)+1 / 2;
 
             if (arr[mid] == k) {
-               return mid;
+               System.out.println(mid);
+               break;
             }
 
             else if (arr[mid] < k) {
@@ -23,21 +24,20 @@ public class Main {
 
         }
 
+     if(lo>hi){
      System.out.println("Not found");
-     return -1;
+     }
 
     }
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int []arr = {10,20,30,40,50,60};
-        int k = 60;
+        int k = 10;
         
 
-      int ans  =   binarySearch(arr, k);
-      if(ans != -1){
-        System.out.println("Idx-> " + ans);
-       }
+        binarySearch(arr, k);
+    
   
     }
 }

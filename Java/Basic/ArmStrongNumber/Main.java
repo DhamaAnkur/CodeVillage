@@ -19,21 +19,21 @@ public class Main{
     }
 
     public static boolean IsArmStrong(int num){
-      int oriNumber = num ;
+      int originalNumber = num ;
       int count = 0;
       int sum = 0;
 
-      while(oriNumber!=0){
-        oriNumber /= 10;
+      while(originalNumber!=0){
+        originalNumber /= 10;
         count++;
       }
 
-      oriNumber = num ;
+      originalNumber = num ;
 
-      while(oriNumber != 0){
-        int rem =  oriNumber%10 ;
+      while(originalNumber != 0){
+        int rem =  originalNumber%10 ;
         sum += Math.pow(rem, count);
-        oriNumber /= 10 ;
+        originalNumber /= 10 ;
       }
 
       if(sum == num){
