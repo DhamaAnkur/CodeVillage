@@ -10,6 +10,7 @@ public class Main {
         String str = "RAJA";
         int i = str.length()-1;
         String rev = "";
+        
 
         while(i>=0){
             rev += str.charAt(i);
@@ -107,6 +108,7 @@ public class Main {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
+            
             for (int j = i+1; j < str.length(); j++) {
                 if (ch == str.charAt(j)) {
                  System.out.println(str.charAt(j));
@@ -124,50 +126,50 @@ public class Main {
 
 
 //6.Write a Java Program to check Armstrong number. or in given range
-/* 
-import java.util.*;
 
-public class Main{
+// import java.util.*;
 
-    public static void main(String[] args) {
-        Scanner scn =  new Scanner(System.in);
-        System.out.println("Enter the range");
-        int a = scn.nextInt();
-        int z = scn.nextInt();
+// public class Strings{
+
+//     public static void main(String[] args) {
+//         Scanner scn =  new Scanner(System.in);
+//         System.out.println("Enter the range");
+//         int a = scn.nextInt();
+//         int z = scn.nextInt();
      
-        for(int i=a ; i<=z ; i++){
-         if(IsArmStrong(i)){
-          System.out.println("ArmStrong-->" + i);
-        }
-    }
+//         for(int i=a ; i<=z ; i++){
+//          if(IsArmStrong(i)){
+//           System.out.println("ArmStrong-->" + i);
+//         }
+//     }
 
-    }
+//     }
 
-    public static boolean IsArmStrong(int num){
-      int originalNumber = num ;
-      int count = 0;
-      int sum = 0;
+//     public static boolean IsArmStrong(int num){
+//       int originalNumber = num ;
+//       int count = 0;
+//       int sum = 0;
 
-      while(originalNumber!=0){
-        originalNumber /= 10;
-        count++;
-      }
+//       while(originalNumber!=0){
+//         originalNumber /= 10;
+//         count++;
+//       }
 
-      originalNumber = num ;
+//       originalNumber = num ;
 
-      while(originalNumber != 0){
-        int rem =  originalNumber%10 ;
-        sum += Math.pow(rem, count);
-        originalNumber /= 10 ;
-      }
+//       while(originalNumber != 0){
+//         int rem =  originalNumber%10 ;
+//         sum += Math.pow(rem, count);
+//         originalNumber /= 10 ;
+//       }
 
-      if(sum == num){
-        return true;
-      }
-        return false;
-    }
-}
-*/
+//       if(sum == num){
+//         return true;
+//       }
+//         return false;
+//     }
+// }
+
 
 
 //7.Write a program tofing second highest number in array
@@ -198,15 +200,20 @@ public class Main{
 
 //8.write a program to replace all white space with using "replaceAll";
 
-import java.util.*;
-public class Main{
+// import java.util.*;
+// public class Strings{
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-            String str = scn.nextLine();
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//             String str = scn.nextLine();
         
-            str = str.replaceAll(" " , "-");
-            System.out.println(str);
+//             str = str.replaceAll(" " , "-");
+//             System.out.println(str);
         
-    }
-}
+//         // System.out.println(true && false || true);
+//         // System.out.println(false || false && true);
+//     }
+// }
+
+
+
