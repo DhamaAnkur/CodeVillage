@@ -3,7 +3,7 @@
 // 1. Write a Java Program to reverse a string without using String inbuilt function.
 /* 
 import java.util.*;
-public class Main {
+public class question {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class Main {
 // 2. Write a Java Program to count the number of words in a string. 
 /* 
 import java.util.*;
-public class Main {
+public class question {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class Main {
 // 3.Write a Java Program to find whether a number is prime or not.
 /* 
 import java.util.*;
-public class Main {
+public class question {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -68,7 +68,7 @@ public class Main {
 /*
 import java.util.*;
 
-public class Main {
+public class question {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -100,7 +100,7 @@ public class Main {
 /* 
 import java.util.*;
 
-public class Main {
+public class question {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -129,7 +129,7 @@ public class Main {
 
 // import java.util.*;
 
-// public class Strings{
+// public class question{
 
 //     public static void main(String[] args) {
 //         Scanner scn =  new Scanner(System.in);
@@ -175,7 +175,7 @@ public class Main {
 //7.Write a program tofing second highest number in array
 /*
 mport java.util.*;
-public class Main{
+public class question{
 
     public static void main(String[] args) {
         int [] arr = {1,4,7,10,2,6,3,9};
@@ -201,7 +201,7 @@ public class Main{
 //8.write a program to replace all white space with using "replaceAll";
 
 // import java.util.*;
-// public class Strings{
+// public class question{
 
 //     public static void main(String[] args) {
 //         Scanner scn = new Scanner(System.in);

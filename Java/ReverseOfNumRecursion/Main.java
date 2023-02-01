@@ -8,14 +8,14 @@ public class Main {
         }
         
         int ans  = num%10;
-        System.out.println(ans);
+        System.out.print(ans);
         num = num/10;
         RecAns(num);
         
     }
 
     public static void main(String[] args) {
-        int num = 321;
+       int num = 12345;
        RecAns(num);
     }
 }
