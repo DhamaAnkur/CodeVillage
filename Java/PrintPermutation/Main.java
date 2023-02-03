@@ -1,4 +1,4 @@
-package Java.PrintPermutations;
+// package Java.PrintPermutation;
 
 public class Main {
     
@@ -7,6 +7,4 @@ public class Main {
 
         
     }
-
 }
-
