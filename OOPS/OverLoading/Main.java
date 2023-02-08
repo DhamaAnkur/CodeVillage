@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         A input = new A();
-        input.s();
+        input.s( 5, "an");
     }
 
 }

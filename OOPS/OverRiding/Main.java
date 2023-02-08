@@ -3,19 +3,19 @@
 // Over Riding
 class A{
     void s(){
-        System.err.println("11");;
+        System.err.println("A11");;
     } 
 }
 
 class B extends A{
     void s(){
-        System.err.println("Ankur");;
+        System.err.println("B11");;
     } 
 }
 
 class C extends A{
     void s(){
-        System.err.println("Ankur 11");;
+        System.err.println("C11");;
     } 
 }
 
