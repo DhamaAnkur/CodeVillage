@@ -172,7 +172,7 @@ public class question {
 
 
 
-//7.Write a program tofing second highest number in array
+//7.Write a program to find second highest number in array
 /*
 mport java.util.*;
 public class question{

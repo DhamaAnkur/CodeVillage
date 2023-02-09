@@ -1,6 +1,9 @@
+
+// Leetcode roman to integer
+
 import java.util.*;
 
-class Solution {
+class solution {
     public int romanToInt(String str) {
        HashMap<Character ,Integer> map = new HashMap<>();
 

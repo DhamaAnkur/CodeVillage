@@ -1,7 +1,9 @@
-//package OOPS.Abstraction;
+// package OOPS.Abstraction;
 
-import javax.sql.rowset.spi.SyncResolver;
-import javax.swing.plaf.synth.SynthScrollBarUI;
+// import javax.sql.rowset.spi.SyncResolver;
+// import javax.swing.plaf.synth.SynthScrollBarUI;
+
+import java.util.*;
 
 public class Main {
 
@@ -9,8 +11,8 @@ public class Main {
         abstract void show();
     }
 
-    class B extends A{
-        void show(){
+   class B extends A{
+      void show(){
         System.out.print("Abstraction");
         }
     }
@@ -21,3 +23,4 @@ public class Main {
     }
 
 }
+
