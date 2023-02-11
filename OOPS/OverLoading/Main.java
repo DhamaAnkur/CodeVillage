@@ -13,7 +13,7 @@ class A {
     }
 
     void s(int n, String a) {
-        System.out.println("Ankur 11");
+        System.out.println("11 Ankur");
     }
 
 }
@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         A input = new A();
-        input.s( 5, "an");
+        input.s( 5);
     }
 
 }
