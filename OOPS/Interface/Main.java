@@ -1,27 +1,29 @@
 
-interface Math{
+interface Sci {
+  void display();
+}
+
+interface Math {
   void show();
 }
 
-interface Sci{
-    void display();
+class test implements Math, Sci {
+  public void show() {
+    System.out.println("Math Interface");
+  }
+
+  public void display() {
+    System.out.println("Sci Interface");
+  }
 }
 
-class test implements Math,Sci{
 
-   public void show(){
-        System.out.println("Interface is done");
-    }
+class Main{
+  public static void main(String[] args) {
+    test t1 = new test();
+    t1.show();
+    t1.display();
 
-    public void display(){
-        System.out.println("Multiple Inheritance in interface");
-    }
-
-    public static void main(String[] args) {
-        test t1 = new test();
-        t1.show();
-        t1.display();
-      }
-
+  }
 }
 
