@@ -64,13 +64,17 @@ import java.util.Scanner;
 
 class Employee{
     String name ;
-    Employee(String name ){
+    int age ;
+     Employee(String name , int age ){
         this.name = name ;
-        System.out.println(name);
-        System.out.println("Parameterized constructor");
+        this.age = age;
+        // System.out.println("Parameterized constructor");
     }
 
 public static void main(String[] args) {
-   Employee e1 = new Employee("Ankur");
+   Employee e1 = new Employee("Ankur" , 30);
+   Employee e2 = new Employee("Dhama" , 20);
+   System.out.println(e1.name +  " " + e1.age);
+   System.out.println(e2.name +  " " + e2.age);
 }
 }
