@@ -5,7 +5,19 @@ class car extends Vehical{
     int no_of_tyres = 4;
     void start(){
         System.out.print("Start with key");
+    }   
+}
+
+class bike extends Vehical{
+    int no_of_tyres = 2;
+    void start(){
+        System.out.print("Start with self");
     }
+}
+
+abstract class Vehical {
+    int no_of_tyres ;
+    abstract void start();
 
     public static void main(String[] args) {
         car c = new car();
@@ -21,18 +33,10 @@ class car extends Vehical{
         System.out.print(", Tyres " + b.no_of_tyres);
         
     }
-}
-
-class bike extends Vehical{
-    int no_of_tyres = 2;
-    void start(){
-        System.out.print("Start with self");
-    }
-}
-
-abstract class Vehical {
-    int no_of_tyres ;
-    abstract void start();
    
 }
+
+
+
+
 

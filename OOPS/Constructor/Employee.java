@@ -62,19 +62,35 @@ import java.util.Scanner;
 //---------------------------------------------------------------------------------------------------------------//
 // Parameterized constructor
 
-class Employee{
-    String name ;
-    int age ;
-     Employee(String name , int age ){
-        this.name = name ;
-        this.age = age;
-        // System.out.println("Parameterized constructor");
-    }
+// class Employee{
+//     String name ;
+//     int age ;
+//      Employee(String name , int age ){
+//         this.name = name ;
+//         this.age = age;
+//         // System.out.println("Parameterized constructor");
+//     }
 
-public static void main(String[] args) {
-   Employee e1 = new Employee("Ankur" , 30);
-   Employee e2 = new Employee("Dhama" , 20);
-   System.out.println(e1.name +  " " + e1.age);
-   System.out.println(e2.name +  " " + e2.age);
-}
+// public static void main(String[] args) {
+//    Employee e1 = new Employee("Ankur" , 30);
+//    Employee e2 = new Employee("Dhama" , 20);
+//    System.out.println(e1.name +  " " + e1.age);
+//    System.out.println(e2.name +  " " + e2.age);
+// }
+// }
+
+import java.util.*;
+class Employee{
+
+
+    public static void print(int[]arr){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+ ", ");
+        }
+    }
+    public static void main(String[] args) {
+        int [] arr = {1,5,2,8,4,6,5,};
+         Arrays.sort(arr);
+        print(arr);
+    }
 }
