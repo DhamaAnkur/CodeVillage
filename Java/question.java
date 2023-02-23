@@ -31,7 +31,6 @@ public class question {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         String str = "Ankur";
-        // System.out.println(str.length());
         int i = 0;
         while(i<str.length()){
            i++;
@@ -65,36 +64,37 @@ public class question {
 */
 
 //4. Write a Java Program for the Fibonacci series.
-/*
-import java.util.*;
 
-public class question {
+// import java.util.*;
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int range = scn.nextInt();
+// public class question {
 
-        int a = 0;
-        int b = 1;
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         int range = 10;
+//         int a = 0;
+//         int b = 1;
 
-        for (int i = 0; i < range ; i++) {
-            if (i < 1) {
-                System.out.print(i + " ");
-            }
+//         for (int i = 0; i < range ; i++) {
+//             if (i < 1) {
+//                 System.out.print(i + " ");
+//             }
 
-            else if (i < 2) {
-                System.out.print(b + " ");
-            }
+//             else if (i < 2) {
+//                 System.out.print(b + " ");
+//             }
 
-            int c = a + b;
-            System.out.print(c + " ");
-            a = b;
-            b = c;
-        }
+//             else{
+//             int c = a + b;
+//             System.out.print(c + " ");
+//             a = b;
+//             b = c;
+//             }
+//         }
 
-    }
-}
-*/
+//     }
+// }
+
 
 //5.Write a Java Program to find the duplicate characters in a string.
 /* 
@@ -173,8 +173,8 @@ public class question {
 
 
 //7.Write a program to find second highest number in array
-/*
-mport java.util.*;
+
+import java.util.*;
 public class question{
 
     public static void main(String[] args) {
@@ -190,11 +190,11 @@ public class question{
             }
         }
          
-        int z  = arr.length-2;
-        System.out.println(arr[z]);
+        // int z  = arr.length-2;
+        System.out.println(arr[arr.length-2]);
     }
 }
-*/
+
 
 
 
@@ -217,23 +217,4 @@ public class question{
 
 
 
-// WAP for xor an array
-import java.util.*;
-public class question{
-
-    static void print(int[]arr){
-        for(int i=0; i<arr.length ; i++){
-            System.out.print(arr[i]+ "");
-        }
-    }
-    public static void main(String[] args) {
-        
-        int []arr  = {0,1,1,1,0,0};
-
-        for(int i=1; i<arr.length ; i++){
-            arr[i] = arr[i]^arr[i-1];
-        }
-        print(arr);
-    }
-    
-}
+// // WAP for xor an array5
