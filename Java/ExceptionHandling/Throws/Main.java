@@ -6,8 +6,8 @@
 
 //     public static void main(String[] args) {
 //         // Scanner scn = new Scanner(System.in);
-//         int n = 123;
-//         if (n >= 10) {
+//         int n = 20;
+//         if (n < 100) {
 //             throw new ArithmeticException("Not a valid number");
 //         }
 //         else{
@@ -21,11 +21,11 @@
 
 import java.util.*;
 
-// class Errors extends Exception {
-//     Errors(String msg) {
-//         super(msg);
-//     }
-// }
+class Errors extends Exception {
+    Errors(String msg) {
+        super(msg);
+    }
+}
 
 public class Main {
 
@@ -33,7 +33,7 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         int n = 5;
 
-        if (n >= 10) {
+        if (n < 10) {
             throw new Exception("Not a valid number");
         }
          else {
