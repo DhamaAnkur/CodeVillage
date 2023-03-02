@@ -1,7 +1,9 @@
+import java.lang.reflect.Constructor;
+
 // package OOPS.Constructor;
 // How to use Constructor
 
-import java.util.Scanner;
+// import java.util.Scanner;
 // class Employee {
 //     String name ;
 //     int age ;
@@ -28,7 +30,6 @@ import java.util.Scanner;
 
 // }
 
-
 //----------------------------------------------------------------------------------------------------------------//
 //Default constructor:-
 
@@ -36,13 +37,15 @@ import java.util.Scanner;
 
 //     int i ;     // when the compiler compile the code then a default constructor is made , beacuse class have not
 //     String name ;  // even a one constructor
- 
+
 //     public static void main(String[] args) {
+
 //         Employee e1 = new Employee();
+//         // e1.i = 5;
+//         // e1.name = "Ankur";
 //         System.out.println(e1.i+ " , " + e1.name);
 //     }
 // }
-
 
 //----------------------------------------------------------------------------------------------------------------//
 // No argument constructor
@@ -54,10 +57,10 @@ import java.util.Scanner;
 //      }
 
 //  public static void main(String[] args) {
+
 //     Employee e1 = new Employee();
 //  }
 // }
-
 
 //---------------------------------------------------------------------------------------------------------------//
 // Parameterized constructor
@@ -65,32 +68,73 @@ import java.util.Scanner;
 // class Employee{
 //     String name ;
 //     int age ;
+//     int contact;
 //      Employee(String name , int age ){
 //         this.name = name ;
 //         this.age = age;
 //         // System.out.println("Parameterized constructor");
 //     }
 
+//     Employee(String name  , int age  , int contact){
+//         this.name = name ;
+//         this.age = age;
+//         this.contact = contact;
+//     }
+
+//     void show(){
+//         System.out.print(name + ", ");
+//         System.out.print(age +", ");
+
+//         if(contact !=0){
+//         System.out.print(contact);
+//         }
+
+//         System.out.println();
+
+//     }
+
 // public static void main(String[] args) {
-//    Employee e1 = new Employee("Ankur" , 30);
+//    Employee e1 = new Employee("Ankur" , 30 , 12);
 //    Employee e2 = new Employee("Dhama" , 20);
-//    System.out.println(e1.name +  " " + e1.age);
-//    System.out.println(e2.name +  " " + e2.age);
+//     e1.show();
+//     e2.show();
 // }
 // }
+
+//--------------------------------------------------------------------------------------------------------------------
 
 import java.util.*;
-class Employee{
 
+class Employee {
+    String name;
+    int age;
+    int contact;
 
-    public static void print(int[]arr){
-        for(int i=0; i<arr.length; i++){
-            System.out.print(arr[i]+ ", ");
-        }
+    Employee(String name, int age) {
+        this.name = name;
+        this.age = age;
+        // System.out.println("Parameterized constructor");
     }
+
+    Employee(Constructor Employee, int contact) {
+        this.contact = contact;
+    }
+
+    void show() {
+        System.out.print(name + ", ");
+        System.out.print(age + ", ");
+
+        if (contact != 0) {
+            System.out.print(contact);
+        }
+
+        System.out.println();
+    }
+
     public static void main(String[] args) {
-        int [] arr = {1,5,2,8,4,6,5,};
-         Arrays.sort(arr);
-        print(arr);
+        // Employee e1 = new Employee("Ankur" , 30 , 12);
+        Employee e2 = new Employee("Dhama", 20);
+        // e1.show();
+        e2.show();
     }
 }

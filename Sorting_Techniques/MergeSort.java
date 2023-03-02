@@ -47,10 +47,12 @@ public class MergeSort {
         int[] nums = { 2, 1, 4, 5, 3 };
         int n = nums.length;
         divide(nums, 0, n - 1);
+
         for(int i=0; i<nums.length ; i++)
         {
             System.out.print(nums[i] + ", ");
         }
+        
 
     }
 }
