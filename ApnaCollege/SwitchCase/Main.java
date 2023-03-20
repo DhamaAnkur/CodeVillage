@@ -10,8 +10,7 @@ public class Main {
         //     case "DGI":
         //         System.out.println("It is Name of College");
         //         break;
-
-        //     case "Noida":
+        //         case "Noida":
         //         System.out.println("It is Name of location");
         //         break;
 

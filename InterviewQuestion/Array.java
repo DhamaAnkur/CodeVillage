@@ -1,13 +1,33 @@
 
-//Array :-  Sorting Algorithms , Reverse an array using two pointer and  recursion ,Sum of two Array , Remove 
-// duplicates from Array with the help of ArrayList
-
+//Array :-  Sorting Algorithms , Reverse an array using two pointer and  recursion ,Sum of two Array , Difference
+// between two arryas , Remove duplicates from Array with the help of ArrayList
 
 import java.util.*;
 
 public class Array {
 
     static int l = 0;
+
+    public static int MaxArray(int[] arr, int[] arr2) {
+        int sum = 0;
+        int sum2 = 0;
+        int count = 1;
+        int count2 = 1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            sum += arr[i] * count;
+            count *= 10;
+        }
+
+        for (int i = arr2.length - 1; i >= 0; i--) {
+            sum2 += arr2[i] * count2;
+            count2 *= 10;
+        }
+
+        if (sum < sum2) {
+            return arr2.length;
+        }
+        return arr.length;
+    }
 
     public static void sumOfTwoArray(int[] arr1, int[] arr2) {
         int carry = 0;
@@ -18,18 +38,18 @@ public class Array {
 
         while (l >= 0) {
             int sum = 0;
-            sum += carry ;
+            sum += carry;
 
             if (i >= 0) {
-                sum += arr1[i--] ;
+                sum += arr1[i--];
             }
             if (j >= 0) {
-                sum += arr2[j--] ;
+                sum += arr2[j--];
             }
 
-            ans[l--] =sum%10;
+            ans[l--] = sum % 10;
             carry = sum / 10;
-            
+
         }
 
         if (carry > 0) {
@@ -40,13 +60,53 @@ public class Array {
 
     }
 
-    public static void swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
+    public static void DifferenceOfTwoArray(int[] arr1, int[] arr2) {
+        // Please complete this
+        // code------------------------------------------------------------------------------
+
+        int idx = MaxArray(arr1, arr2);
+        int[] ans = new int[idx];
+        int i = arr1.length - 1;
+        int j = arr2.length - 1;
+        int borrow = 0;
+
+        while (i >= 0) {
+            int digit = 0;
+            digit += arr1[i] + borrow;
+
+            if (j >= 0) {
+                digit -= arr2[j];
+            }
+
+            if (digit < 0) {
+                digit += 10;
+                borrow = -1;
+            } else {
+                borrow = 0;
+            }
+
+            ans[--idx] = digit;
+            i--;
+            j--;
+
+        }
+
+        boolean flag = true;
+        for (int z = 0; z < ans.length; z++) {
+            if (ans[z] == 0 && flag != false) {
+                continue;
+            }
+            if (ans[z] != 0) {
+                System.out.print(ans[z] + " ");
+                flag = false;
+            }
+        }
+
     }
 
     public static void sort(int[] arr) {
+
+        // Merge Sort:- Time complexity--> 0(nlogn) , space complexity--> 0(n) ;
 
         // Bubble Sort:- Time complexity--> 0(n*n) , Space complexity--> 0(1) ;
         for (int i = 0; i <= arr.length - 1; i++) {
@@ -124,30 +184,32 @@ public class Array {
     public static int removeDuplicate(int[] arr, int n) {
 
         ArrayList<Integer> al = new ArrayList<>();
-        int count = 0;
+        int size = 0;
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i - 1] != arr[i]) {
                 al.add(arr[i - 1]);
-                count++;
+                size++;
             }
             if (i == arr.length - 1) {
                 al.add(arr[i]);
-                count++;
+                size++;
             }
         }
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < size; i++) {
             arr[i] = al.get(i);
         }
-        return count;
+        return size;
     }
 
     public static void main(String[] args) {
-        int[] arr1 = { 5, 6, 9 };
-        int[] arr2 = { 5, 2, 1 };
+        int[] arr1 = { 6, 7, 2 };
+        int[] arr2 = { 5, 8, 9 };
 
-        sumOfTwoArray(arr1, arr2);
+        DifferenceOfTwoArray(arr1, arr2);
+
+        // sumOfTwoArray(arr1, arr2);
 
         // sort(arr);
         // int len = removeDuplicate(arr, arr.length);
