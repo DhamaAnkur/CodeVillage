@@ -6,7 +6,25 @@ import java.util.*;
 
 public class Array {
 
-    static int l = 0;
+    // static int l = 0;
+
+    public static void rotateArray(int[]arr , int k){
+        // int mid  = arr.length-k;
+
+        k = k%arr.length;
+        if (k<0){
+            k+= arr.length;
+        }
+        
+        int n  = arr.length ;
+        reverse(arr, 0, n-k-1);
+        reverse(arr ,n-k , n-1);
+        reverse(arr, 0 , n-1);
+        
+
+        display(arr,arr.length);
+
+    }
 
     public static int MaxArray(int[] arr, int[] arr2) {
         int sum = 0;
@@ -93,9 +111,10 @@ public class Array {
 
         boolean flag = true;
         for (int z = 0; z < ans.length; z++) {
-            if (ans[z] == 0 && flag != false) {
-                continue;
+            if (ans[z] == 0 && flag == false) {
+                System.out.print(ans[z]+" ");
             }
+
             if (ans[z] != 0) {
                 System.out.print(ans[z] + " ");
                 flag = false;
@@ -154,23 +173,20 @@ public class Array {
         }
     }
 
-    public static void reverse(int[] arr, int n) {
+    public static void reverse(int[] arr, int i ,  int j) {
 
         // Reverse using recursion ----------------------------------------
-        if (l >= n) {
+        if (i > j) {
             return;
         }
 
-        int temp = arr[l];
-        arr[l] = arr[n - 1];
-        arr[n - 1] = temp;
-        l++;
-        reverse(arr, n - 1);
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        reverse(arr,i, j - 1);
 
         // Reverse using two pointer ------------------------------
-        // int i = 0;
-        // int j = n - 1;
-
         // while (i <= j) {
         // int temp = arr[i];
         // arr[i] = arr[j];
@@ -204,17 +220,47 @@ public class Array {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = { 6, 7, 2 };
-        int[] arr2 = { 5, 8, 9 };
 
-        DifferenceOfTwoArray(arr1, arr2);
+        // Difference of two Array-------------------------------------------------------
+        // int[] arr1 = { 6, 7, 0 };
+        // int[] arr2 = { 6, 5, 0 };
+        // DifferenceOfTwoArray(arr1, arr2);
 
+
+        // Sum of two Array------------------------------------------
+        // int[] arr1 = { 6, 0, 0 };
+        // int[] arr2 = { 6, 0, 0 };
         // sumOfTwoArray(arr1, arr2);
 
+
+        // Sort an array---------------------------------------------
         // sort(arr);
+
+
+        // Remove duplicates from an array----------------------------
         // int len = removeDuplicate(arr, arr.length);
-        // reverse(arr, len);
+
+
+        // Reverse an array--------------------------------------------
+        // int[]A = {1,2,3};
+        // reverse(A,0,A.length-1);
+        // display(A, A.length);
+
+
+        //Print an Array------------------------------------------------
         // display(arr, len);
+
+
+        // Maximum value between two arrya like int[]A = {1,0} and int[]B = {2,0} , output--> B {2,0}
+        // int[]A = {1,2,3};
+        // int[]B = {1,0,0};
+        // MaxArray(A, B);
+
+
+        // //Rotate an Arrya
+        int [] A = {1,2,3,4,5};
+        int rotateByRight = 2;
+        rotateArray(A, rotateByRight);
 
     }
 
