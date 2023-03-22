@@ -5,9 +5,12 @@
 // this error if you change the method name from toString() to something else that is not You won’t present
 // in the superclass Object.
 
-package InterviewQuestion;
+// package InterviewQuestion;
 
-public class Que1 {
+import java.util.*;
+
+
+public class Main1 {
     
     public static String toString(){
 		System.out.println("Test toString called");

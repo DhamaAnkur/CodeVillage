@@ -6,7 +6,7 @@
 // figures out that foo() is a static method and should be called using class. So it changes the method call
 // obj.foo() to Que2.foo() and hence no NullPointerException.   
 
-public class Que2 {
+public class Main {
     public static String foo() {
         System.out.println("Test foo called");
         return "---";

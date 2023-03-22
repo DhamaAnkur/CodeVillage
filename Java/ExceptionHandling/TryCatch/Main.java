@@ -1,21 +1,21 @@
  // package Java.ExceptionHandling.TryCatch;
 
-public class Main {
+// public class Main {
     
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
         
-        try{     // It will check where is exception/error in this code 
-            int a = 10;
-            int c = a/0;
-            System.out.println(c);
-        }
+//         try{     // It will check where is exception/error in this code 
+//             int a = 10;
+//             int c = a/0;
+//             System.out.println(c);
+//         }
        
-         catch(Exception e){   // It  will show you where are the exception/error
-            System.out.println(e);
-         }
+//          catch(Exception e){   // It  will show you where are the exception/error
+//             System.out.println(e);
+//          }
 
-    }
-}
+//     }
+// }
 
 
 
@@ -72,3 +72,15 @@ public class Main {
 
 
 // }
+
+
+
+
+public class Main{
+
+    public static void main(String[] args) {
+        int a , b=20 ;
+        a = 90/b;
+    return 0;
+    }
+}

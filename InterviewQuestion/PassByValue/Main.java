@@ -1,7 +1,7 @@
 // In this we pass refernce of integer number from class PassByValue by it called always pass by value because 
 // in java their is no pass by reference
 
-public class PassByValue {
+public class Main {
 
     int number;
 
