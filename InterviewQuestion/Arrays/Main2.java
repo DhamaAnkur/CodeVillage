@@ -1,6 +1,32 @@
+
+//Binary Search  :- Time complexity in best case-> 0(1) , wrost case-> o(logn) , Average case-> o)logn 
+//Space complexity :- 0(1) 
+
 import java.util.*;
 
 public class Main2 {
+
+    public static void SubsetOfArray(int[] arr) {
+        int n = arr.length;
+        int total = (int) Math.pow(2, n);
+
+        for (int i = 0; i < total; i++) {
+            int temp = i;
+            String str = "";
+
+            for (int j = n - 1; j >= 0; j--) {
+                int rem = temp % 2;
+                temp = temp / 2;
+                if (rem == 0) {
+                    str = "_ " + str;
+                } else {
+                    str = arr[j] + " " + str;
+                }
+            }
+
+            System.out.println(str);
+        }
+    }
 
     public static int CeilAndFloor(int[] arr, int target, int iteration) {
         int lo = 0;
@@ -67,62 +93,62 @@ public class Main2 {
         int ltIdx = arr.length - 1;
         int FirstIdx = -1;
         int LastIdx = -1;
-        
+
         while (stIdx <= ltIdx) {
-            
+
             int mid = (ltIdx + stIdx) + 1 / 2;
             if (arr[mid] == target) {
                 FirstIdx = mid;
-                ltIdx = mid-1;
-                iteration++;
-            }
-
-             else if (arr[mid] < target) {
-                stIdx = mid + 1;
-                iteration++;
-            } 
-            else {
                 ltIdx = mid - 1;
-                iteration++;
-            }
-        }
-
-        stIdx = 0;
-        ltIdx = arr.length-1;
-
-        while(stIdx <= ltIdx){
-            int mid  = (ltIdx+stIdx)+1 /2;
-
-            if(arr[mid] == target){
-                LastIdx = mid;
-                stIdx = mid+1;
                 iteration++;
             }
 
             else if (arr[mid] < target) {
                 stIdx = mid + 1;
                 iteration++;
-            } 
-            else {
+            } else {
+                ltIdx = mid - 1;
+                iteration++;
+            }
+        }
+
+        stIdx = 0;
+        ltIdx = arr.length - 1;
+
+        while (stIdx <= ltIdx) {
+            int mid = (ltIdx + stIdx) + 1 / 2;
+
+            if (arr[mid] == target) {
+                LastIdx = mid;
+                stIdx = mid + 1;
+                iteration++;
+            }
+
+            else if (arr[mid] < target) {
+                stIdx = mid + 1;
+                iteration++;
+            } else {
                 ltIdx = mid - 1;
                 iteration++;
             }
 
         }
 
-        System.out.println("FirstIndex = " + FirstIdx + " , " + "LastIndex = "+ LastIdx);
-       
+        System.out.println("FirstIndex = " + FirstIdx + " , " + "LastIndex = " + LastIdx);
 
         return iteration;
     }
 
     public static void main(String[] args) {
         // Scanner scn = new Scanner(System.in);
-        int[] arr = {2,2,2,4,4,4,4,6,6,8,8,8,8};
-        int k = 8;
-        
-        int iterations = FirstAndLastIdx(arr, k, 0);
-        System.out.println("Iternations are to search this target is:- " + iterations);
+        int[] arr = { 1, 2, 3 };
+        // int k = 8;
+
+        SubsetOfArray(arr);
+
+        // int iterations = FirstAndLastIdx(arr, k, 0);
+        // System.out.println("Iternations are to search this target is:- " +
+        // iterations);
 
     }
 }
