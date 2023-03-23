@@ -6,6 +6,45 @@ import java.util.*;
 
 public class Main2 {
 
+   public static Scanner scn = new Scanner(System.in);
+
+   public static void MatrixMul(int[][]A , int[][]B){
+    int n1 = A.length;
+    int m1 = A[0].length;
+    int n2 = B.length;
+    int m2 = B[0].length;
+    int [][]ans = new int[n1][m2];
+    for(int i=0; i<n1 ; i++){
+        for(int j=0 ; j<m2 ; j++){
+            int sum = 0;
+            for(int k=0 ; k<m2 ; k++){
+                sum += A[i][k] * B[k][j];
+            }
+            ans[i][j] = sum ;
+        }
+    }
+
+    print2DArray(ans, ans.length, ans[0].length);
+
+}
+
+    public static void Input2DArray(int[][]arr , int n, int m){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+    }
+
+    public static void print2DArray(int[][]arr , int n , int m){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                System.out.print(arr[i][j] +  " ");
+            }
+        System.out.println();
+        }
+    }
+
     public static boolean isBadVersion(int val) {
         int bad = 10;
         if (val >= bad) {
@@ -166,15 +205,23 @@ public class Main2 {
     }
 
     public static void main(String[] args) {
-        // Scanner scn = new Scanner(System.in);
+
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        int[][]arr = new int[n][m];
+        Input2DArray(arr, n, m);
+        MatrixMul(arr, arr);
+
+        // print2DArray(arr, n , m );
         // int[] arr = { 1, 2, 3 };
-        int k = 32;
-        FirstBadVersion(k);
+        // int k = 15;
+        // FirstBadVersion(k);
         // SubsetOfArray(arr);
 
         // int iterations = FirstAndLastIdx(arr, k, 0);
-        // System.out.println("Iternations are to search this target is:- " +
-        // iterations);
+        // System.out.println("Iternations are to search this target is:- " + iterations);
+
+
 
     }
 }
