@@ -6,6 +6,32 @@ import java.util.*;
 
 public class Main2 {
 
+    public static boolean isBadVersion(int val) {
+        int bad = 10;
+        if (val >= bad) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void FirstBadVersion(int n) {
+        int lo = 1;
+        int hi = n;
+        int ans = -1;
+
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (isBadVersion(mid)){
+                ans = mid;
+                hi = mid - 1;
+            } else {
+                lo = mid + 1;
+            }  
+        }
+        System.out.println(ans);;
+        
+    }
+
     public static void SubsetOfArray(int[] arr) {
         int n = arr.length;
         int total = (int) Math.pow(2, n);
@@ -141,10 +167,10 @@ public class Main2 {
 
     public static void main(String[] args) {
         // Scanner scn = new Scanner(System.in);
-        int[] arr = { 1, 2, 3 };
-        // int k = 8;
-
-        SubsetOfArray(arr);
+        // int[] arr = { 1, 2, 3 };
+        int k = 32;
+        FirstBadVersion(k);
+        // SubsetOfArray(arr);
 
         // int iterations = FirstAndLastIdx(arr, k, 0);
         // System.out.println("Iternations are to search this target is:- " +
