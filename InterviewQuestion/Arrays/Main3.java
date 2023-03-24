@@ -8,31 +8,43 @@ public class Main3 {
     public static void ColumnWiseSpiral(int[][] arr) {
         int n = arr.length;
         int m = arr[0].length;
-        int minCol = 0;
-        int minRow = 0;
-        int maxRow = n;
-        int count = 0;
-        List<Integer> al = new ArrayList<>();
+        // int minCol = 0;
+        // int minRow = 0;
+        // int maxRow = n;
+        // int count = 0;
+        // List<Integer> al = new ArrayList<>();
 
-        while (count < arr.length * arr[0].length) {
-            if (minRow == 0) {
-                for (int i = minRow; i < maxRow && count < n * m; i++) {
-                    al.add(arr[i][minCol]);
-                    count++;
-                }
-                minCol++;
-            }
+        // while (count < arr.length * arr[0].length) {
+        //     if (minRow == 0) {
+        //         for (int i = minRow; i < maxRow && count < n * m; i++) {
+        //             al.add(arr[i][minCol]);
+        //             count++;
+        //         }
+        //         minCol++;
+        //     }
+        //     else {
+        //         for (int i = maxRow; i < minRow && count < n * m; i++) {
+        //             al.add(arr[i][minCol]);
+        //             count++;
+        //         }
+        //         minCol++;
+        //     }
+        // }
+        // System.out.println(al);
 
-            else {
-                for (int i = maxRow; i < minRow && count < n * m; i++) {
-                    al.add(arr[i][minCol]);
-                    count++;
+        for(int j=0; j<m ; j++){
+            if(j%2==0){
+                for(int i=0; i<n ; i++){
+                    System.out.println(arr[i][j]+" ");
                 }
-                minCol++;
             }
+            else{
+                for(int i=n-1; i>=0 ; i--){
+                    System.out.println(arr[i][j]+" ");
+                }
+            }
+            
         }
-
-        System.out.println(al);
 
     }
 
