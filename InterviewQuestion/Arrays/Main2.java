@@ -220,8 +220,9 @@ public class Main2 {
 
         // int iterations = FirstAndLastIdx(arr, k, 0);
         // System.out.println("Iternations are to search this target is:- " + iterations);
-
-
+        
 
     }
 }
+
+
