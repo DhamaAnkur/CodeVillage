@@ -18,21 +18,15 @@ class test implements Math, Sci {
     System.out.println("Sci Interface--> " + (a-b) );
   }
 
-  public static void main(String[] args) {
-    test t1 = new test();
-    t1.show(2,4);
-    t1.display(5,2);
-
-  }
 }
 
 
-// class Main{
-//   public static void main(String[] args) {
-//     test t1 = new test();
-//     t1.show();
-//     t1.display();
+class Main{
+  public static void main(String[] args) {
+    test t1 = new test();
+    t1.show(2,4);
+    t1.display(2,4);
 
-//   }
-// }
+  }
+}
 
